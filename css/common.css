@@ -144,7 +144,8 @@ body { min-width: 320px; font-family: RalewayRegular, Arial, sans-serif; font-si
 .section__title { overflow: hidden; position: absolute; z-index: 5; top: 30px; left: 0; right: 0; color: #fff; text-align: center; text-transform: uppercase; white-space: nowrap; font-weight: normal; }
 .section__title h2 { font-family: RalewayMedium, Arial, sans-serif; font-size: 24px; font-weight: normal; letter-spacing: 1px; }
 .section__title h3 { display: inline-block; margin-top: 15px; font-size: 12px; letter-spacing: 4px; font-weight: normal; }
-.section__title h3:after { content: ""; display: block; margin: 20px auto 0; width: 70%; height: 1px; background-color: #fff; }
+.section__title h3:after { content: ""; display: block; margin: 20px auto 0; width: 70%; height: 1px; background-color: #fff; -webkit-transform: scale(0, 1); -ms-transform: scale(0, 1); transform: scale(0, 1); -webkit-transition: 2s; transition: 2s; }
+.section__title h3.animated:after { -webkit-transform: scale(1, 1); -ms-transform: scale(1, 1); transform: scale(1, 1); -webkit-transition: 2s; transition: 2s; }
 
 .portfolio-wrap { margin: 0 auto; margin-top: 75px; padding: 25px 15px; max-width: 1170px; }
 
