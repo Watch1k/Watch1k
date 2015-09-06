@@ -7,6 +7,30 @@ $(window).on('load', function () {
 $(document).ready(function(){
 
 
+// Fancybox
+	$('.portfolio-fancybox').fancybox({
+		theme: 'light',
+		padding: 5,
+		openEffect	: 'drop',
+		closeEffect	: 'drop',
+		prevEffect: 'none',
+		nextEffect: 'none',
+		locked: true,
+		locale: 'ru',
+		locales: {
+			'ru': {
+				CLOSE: 'закрыть',
+				EXPAND: 'показать в полном размере'
+			}
+		},
+		afterShow: function(){
+			$.fn.fullpage.setMouseWheelScrolling(false);
+		},
+		afterClose: function(){
+			$.fn.fullpage.setMouseWheelScrolling(true);
+		}
+	});
+
 // Signature Animation
 	// stroke-dashoffset
 	function SignatureDashOffset() {
@@ -14,8 +38,8 @@ $(document).ready(function(){
 			var _this = $('#signature path').eq(i);
 			var _thisSnap = Snap('#signature path:nth-child('+(i+1)+')');
 			var _thisLength = _thisSnap.getTotalLength();
-			_this.attr('stroke-dashoffset', _thisLength);
-			_this.attr('stroke-dasharray', _thisLength);
+			_this.attr('stroke-dashoffset', _thisLength + 7);
+			_this.attr('stroke-dasharray', _thisLength + 5);
 		}
 	}
 	SignatureDashOffset();
@@ -197,7 +221,9 @@ $(document).ready(function(){
 			for (var i = 0; i < animationDelay.length; i++) {
 				clearTimeout(animationDelay[i]);
 			}
-			currentAnimation.stop();
+			if (currentAnimation) {
+				currentAnimation.stop();
+			}
 			SignatureDashOffset();
 		}
 	});

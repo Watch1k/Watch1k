@@ -21,7 +21,7 @@ if ($_POST) {
         $subject = "Watch1k PORTFOLIO SITE";
         
         //email body
-        $message_body = $user_name."\r\n".$user_email."\r\n".$user_message;
+        $message_body = "Имя отправителя: ".$user_name."\r\nПочта: ".$user_email."\r\nСообщение: ".$user_message;
         
         //proceed with PHP email.
         $headers = 'From: '.$user_name.'' . "\r\n" .

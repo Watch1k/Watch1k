@@ -204,7 +204,7 @@ body { min-width: 320px; font-family: RalewayRegular, Arial, sans-serif; font-si
 .contacts-form .form-group { font-family: RalewayLight, Arial, sans-serif; font-size: 18px; color: #fff; letter-spacing: 1px; }
 .contacts-form .form-group .star-el { display: inline-block; font-size: 30px; line-height: 1; vertical-align: -7px; }
 .contacts-form .form-group .form-error { display: inline-block; padding: 0 5px; font-size: 14px; color: #fff; background-color: rgba(0, 0, 0, 0.3); }
-.contacts-form .form-input { padding: 0 10px; width: 100%; font-family: RalewayRegular, Arial, sans-serif; font-size: 14px; color: #222; letter-spacing: 1.5px; line-height: 35px; border: 1px solid transparent; }
+.contacts-form .form-input { padding: 0 10px; width: 100%; height: 35px; font-family: RalewayRegular, Arial, sans-serif; font-size: 14px; color: #222; letter-spacing: 1.5px; line-height: 35px; border: 1px solid transparent; }
 .contacts-form .form-input:-moz-placeholder, .contacts-form .form-input::-moz-placeholder { color: #1fa67a; opacity: 1; }
 .contacts-form .form-input::-webkit-input-placeholder { color: #1fa67a; }
 .contacts-form .form-input:focus { box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5); }
@@ -222,3 +222,6 @@ body { min-width: 320px; font-family: RalewayRegular, Arial, sans-serif; font-si
 .form-new { display: none; margin-top: 25px; }
 .form-new .btn-new { width: 100%; font-size: 20px; color: #1fa67a; line-height: 35px; background-color: #fff; text-align: center; }
 .form-new .btn-new:hover { box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.5); }
+
+/* Fancybox style */
+.fancybox-wrap, .fancybox-wrap * { box-sizing: content-box; }
